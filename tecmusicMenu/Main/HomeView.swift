@@ -9,10 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     init() {
-    let navBarAppearance = UINavigationBar.appearance()
+        let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-                navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-              }
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
     var body: some View {
         NavigationView{
             ZStack{
@@ -22,7 +22,7 @@ struct HomeView: View {
                 ]),startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea(.all, edges: .all)
                 ScrollView{
-                    MenuLista(menus: Menu.all)
+                    SongLista(menus: Menu.all)
                 }
                 .navigationTitle("Menu")
             }

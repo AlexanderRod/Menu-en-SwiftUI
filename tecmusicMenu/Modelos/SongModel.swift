@@ -1,5 +1,5 @@
 //
-//  MenuModel.swift
+//  SongModel.swift
 //  tecmusicMenu
 //
 //  Created by alexander rodrigo calderon eguiluz on 24/06/22.
@@ -26,6 +26,7 @@ enum Category: String {
 struct Menu: Identifiable {
     let id = UUID()
     let name: String
+    let cancion: String
     let image: String
     let category: Category.RawValue
 }
@@ -33,17 +34,20 @@ struct Menu: Identifiable {
 extension Menu {
     static let all: [Menu] = [
         Menu(
-            name: "THE WEEKND & DAFT PUNK – STARBOY",
+            name: "THE WEEKND",
+            cancion: "STARBOY",
             image: "https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452",
             category: "Electronica"
         ),
         Menu(
-            name: "WOS - CANGURO",
+            name: "WOS",
+            cancion: "CANGURO",
             image: "https://i.scdn.co/image/ab67616d0000b2735d9aed5c0f5f7ce3a0ea1e01",
             category: "Trap"
         ),
         Menu(
-            name: "THE WEEKND - Blinding Lights",
+            name: "THE WEEKND",
+            cancion: "Blinding Lights",
             image: "https://i.scdn.co/image/ab67616d0000b273a3eff72f62782fb589a492f9",
             category: "Pop"
         ),

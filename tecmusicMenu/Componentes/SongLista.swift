@@ -1,5 +1,5 @@
 //
-//  MenuLista.swift
+//  SongLista.swift
 //  tecmusicMenu
 //
 //  Created by alexander rodrigo calderon eguiluz on 24/06/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuLista: View {
+struct SongLista: View {
     var menus: [Menu]
     var body: some View {
         VStack{
@@ -21,7 +21,10 @@ struct MenuLista: View {
                 Spacer()
             }
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15){
-                ForEach(menus) { menu in MenuCard(menu: menu)
+                ForEach(menus) { menu in
+                    NavigationLink(destination: ReproductorView(menu: menu)) {
+                        SongCard(menu: menu)
+                    }
                 }
             }
             .padding(.top)
@@ -30,10 +33,10 @@ struct MenuLista: View {
     }
 }
 
-struct MenuLista_Previews: PreviewProvider {
+struct SongLista_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            MenuLista(menus: Menu.all)
+            SongLista(menus: Menu.all)
         }
     }
 }

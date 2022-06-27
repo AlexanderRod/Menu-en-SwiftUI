@@ -22,8 +22,9 @@ struct SearchView: View {
                 ]),startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea(.all, edges: .all)
                 Text("Buscador")
-                    .foregroundColor(Color.white)
                     .navigationTitle("Buscador")
+                    .foregroundColor(Color.white)
+                    
             }
             .navigationViewStyle(.stack)
         }
